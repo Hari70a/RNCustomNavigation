@@ -12,26 +12,15 @@ import {
   View
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-export default class FirstScreen extends Component<{}> {
+export default class Settings extends Component<{}> {
   render() {
-    console.log(this.props,"propsn")
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to FirstScreen!
+          Welcome to Settings!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions} onPress={() => this.props.navigation.navigate('SecondScreen')}>
-          {instructions}
+        <Text style={styles.instructions}  onPress= {() => this.props.navigation.navigate('Chat')}>
+          Go Forward
         </Text>
       </View>
     );
@@ -43,7 +32,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'moccasin',
   },
   welcome: {
     fontSize: 20,
